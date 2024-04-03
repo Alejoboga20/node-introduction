@@ -1,22 +1,24 @@
 {
-  "name": "introduction",
-  "version": "1.0.0",
-  "description": "Learning the basics of Node JS",
-  "main": "app.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Alejoboga20/node-introduction.git"
-  },
-  "keywords": [
-    "node-introduction"
-  ],
-  "author": "Alejoboga20",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Alejoboga20/node-introduction/issues"
-  },
-  "homepage": "https://github.com/Alejoboga20/node-introduction#readme"
+	"name": "introduction",
+	"version": "1.0.0",
+	"description": "Learning the basics of Node JS",
+	"main": "app.js",
+	"scripts": {
+		"start": "node src/app.js",
+		"dev": "echo 'Hello World'",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Alejoboga20/node-introduction.git"
+	},
+	"keywords": [
+		"node-introduction"
+	],
+	"author": "Alejoboga20",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/Alejoboga20/node-introduction/issues"
+	},
+	"homepage": "https://github.com/Alejoboga20/node-introduction#readme"
 }
