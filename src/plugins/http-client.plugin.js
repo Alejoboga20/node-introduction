@@ -1,7 +1,8 @@
+const axios = require('axios');
+
 const httpCLient = {
 	get: async (url) => {
-		const response = await fetch(url);
-		const data = await response.json();
+		const { data } = await axios.get(url);
 
 		return data;
 	},
