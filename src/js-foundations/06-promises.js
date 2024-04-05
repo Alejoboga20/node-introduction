@@ -8,7 +8,32 @@ const getPokemonById = (id, callback) => {
 			}
 		})
 		.catch()
-		.finally();
+		.finally(() => console.log('Pokemon fetched'));
 };
 
-module.exports = getPokemonById;
+const getPokemonByIdWithPromiseConcatenation = (id, callback) => {
+	fetch(`${baseUrl}${id}`)
+		.then((response) => response.json())
+		.then((pokemon) => callback(pokemon.name));
+};
+
+const getPokemonByIdWithoutCallback = (id) => {
+	return fetch(`${baseUrl}${id}`)
+		.then((response) => response.json())
+		.then((pokemon) => pokemon.name);
+};
+
+const getPokemonByIdWithError = (id) => {
+	return fetch(`${baseUrl}${id}`)
+		.then((response) => {
+			throw new Error('Error fetching data');
+		})
+		.then((pokemon) => pokemon.name);
+};
+
+module.exports = {
+	getPokemonById,
+	getPokemonByIdWithPromiseConcatenation,
+	getPokemonByIdWithoutCallback,
+	getPokemonByIdWithError,
+};
