@@ -1,11 +1,13 @@
+const { httpCLient } = require('../plugins');
+
 const baseUrl = 'https://pokeapi.co/api/v2/pokemon/';
 
 const getPokemonById = async (id) => {
-	const response = await fetch(`${baseUrl}${id}`);
-	const pokemon = await response.json();
-
-	return pokemon.name;
+	const response = await httpCLient.get(`${baseUrl}${id}`);
+	console.log({ response });
 };
+
+getPokemonById(1);
 
 module.exports = {
 	getPokemonById,

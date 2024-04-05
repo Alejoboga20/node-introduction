@@ -9,6 +9,7 @@ const {
 	getPokemonByIdWithoutCallback,
 	getPokemonByIdWithError,
 } = require('./js-foundations/06-promises');
+require('./js-foundations/07-async-await');
 
 getPokemonById(1, (pokemonName) => console.log({ pokemonName }));
 getPokemonByIdWithPromiseConcatenation(2, (pokemonName) => console.log({ pokemonName }));
