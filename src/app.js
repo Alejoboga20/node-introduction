@@ -3,6 +3,9 @@ const { getAge, getUUID } = require('./plugins');
 // require('./js-foundations/02-destructuring');
 const { getUserById } = require('./js-foundations/03-callbacks');
 const { buildMakePerson } = require('./js-foundations/05-factory');
+const getPokemonById = require('./js-foundations/06-promises');
+
+getPokemonById(1, (pokemonName) => console.log({ pokemonName }));
 
 getUserById(1, (error, user) => {
 	if (error) {
