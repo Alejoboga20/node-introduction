@@ -10,6 +10,7 @@ const {
 	getPokemonByIdWithError,
 } = require('./js-foundations/06-promises');
 require('./js-foundations/07-async-await');
+const { buildLogger } = require('./plugins');
 
 getPokemonById(1, (pokemonName) => console.log({ pokemonName }));
 getPokemonByIdWithPromiseConcatenation(2, (pokemonName) => console.log({ pokemonName }));
@@ -29,3 +30,6 @@ const makePerson = buildMakePerson({ getAge, getUUID });
 const obj = { name: 'John', birthdate: '1994-08-26' };
 const john = makePerson(obj);
 console.log({ john });
+
+const logger = buildLogger('app.js');
+logger.log('Hello, world!');
