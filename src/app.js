@@ -33,3 +33,4 @@ console.log({ john });
 
 const logger = buildLogger('app.js');
 logger.log('Hello, world!');
+logger.error('An error occurred!');
