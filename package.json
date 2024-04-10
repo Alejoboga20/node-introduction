@@ -26,5 +26,9 @@
 		"get-age": "^1.0.1",
 		"uuid": "^9.0.1",
 		"winston": "^3.13.0"
+	},
+	"devDependencies": {
+		"@types/node": "^20.12.7",
+		"typescript": "^5.4.5"
 	}
 }
