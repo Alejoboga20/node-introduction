@@ -14,3 +14,14 @@ More info here: [Link](https://gist.github.com/Klerith/47af527da090043f604b972b2
 - Event Loop
 - Modules
 - NPM
+
+## TypeScript section
+
+- Loggers
+- Winston Library.
+- Basics configurations and adapters
+- TypeScript
+- Configuring TypeScript in Node Project.
+- Migration to TypeScript
+- TypeScript Compiler
+- ts-node + nodemon

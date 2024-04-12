@@ -12,6 +12,8 @@
 // require('./js-foundations/07-async-await');
 // const { buildLogger } = require('./plugins');
 
+import { findHeroById } from './services/hero.service';
+
 // getPokemonById(1, (pokemonName) => console.log({ pokemonName }));
 // getPokemonByIdWithPromiseConcatenation(2, (pokemonName) => console.log({ pokemonName }));
 // getPokemonByIdWithoutCallback(3).then((pokemonName) => console.log({ pokemonName }));
@@ -36,3 +38,6 @@
 // logger.error('An error occurred!');
 
 console.log('Hello TypeScript');
+
+const hero = findHeroById(1);
+console.log(hero?.name ?? 'Hero not found');
