@@ -10,7 +10,7 @@
 // 	getPokemonByIdWithError,
 // } = require('./js-foundations/06-promises');
 // require('./js-foundations/07-async-await');
-// const { buildLogger } = require('./plugins');
+import { buildLogger } from './plugins/logger.plugin';
 
 import { findHeroById } from './services/hero.service';
 
@@ -33,9 +33,9 @@ import { findHeroById } from './services/hero.service';
 // const john = makePerson(obj);
 // console.log({ john });
 
-// const logger = buildLogger('app.js');
-// logger.log('Hello, world!');
-// logger.error('An error occurred!');
+const logger = buildLogger('app.js');
+logger.error('An error occurred!');
+logger.log('Hello, world!');
 
 console.log('Hello TypeScript');
 
