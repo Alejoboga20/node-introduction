@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const httpCLient = {
+export const httpCLient = {
 	get: async (url: string) => {
 		const { data } = await axios.get(url);
 
@@ -10,5 +10,3 @@ const httpCLient = {
 	put: async (url: string, body: any) => {},
 	delete: async (url: string) => {},
 };
-
-export default httpCLient;

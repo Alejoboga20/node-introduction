@@ -1,7 +1,15 @@
-//const { getAge, getUUID } = require('../plugins');
+interface BuildMakePersonOptions {
+	getUUID: () => string;
+	getAge: (birthdate: string) => number;
+}
 
-const buildMakePerson = ({ getUUID, getAge }) => {
-	return ({ name, birthdate }) => {
+interface PersonOptions {
+	name: string;
+	birthdate: string;
+}
+
+export const buildMakePerson = ({ getUUID, getAge }: BuildMakePersonOptions) => {
+	return ({ name, birthdate }: PersonOptions) => {
 		return {
 			id: getUUID(),
 			name,
@@ -22,7 +30,3 @@ const buildMakePerson = ({ getUUID, getAge }) => {
 // const obj = { name: 'John', birthdate: '1994-08-26' };
 // const john = buildPerson(obj);
 // console.log({ john });
-
-module.exports = {
-	buildMakePerson,
-};
