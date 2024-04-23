@@ -22,7 +22,8 @@ export function getUserById(id: number, callback: (error?: any, user?: User) => 
 	const user = users.find((user) => user.id === id);
 
 	if (!user) {
-		callback(`User with id ${id} not found`);
+		const error = `User with id ${id} not found`;
+		return callback(error);
 	}
 
 	return callback(undefined, user);
