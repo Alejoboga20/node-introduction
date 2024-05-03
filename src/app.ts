@@ -41,3 +41,5 @@ console.log('Hello TypeScript');
 
 const hero = findHeroById(1);
 console.log(hero?.name ?? 'Hero not found');
+
+console.log('Finish app');
